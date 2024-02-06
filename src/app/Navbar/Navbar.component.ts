@@ -8,17 +8,23 @@ declare var $: any; // Declare the jQuery variable
 })
 export class NavbarComponent implements OnInit, AfterViewInit {
   constructor() {}
-
+  x:any;
   ngOnInit() {}
   ngAfterViewInit() {
-    $('ul.navbar-nav li a').click(function(this: HTMLAnchorElement) {
+    $('ul.navbar-nav li a').click(function(this: any) {
       console.log($(this).prop('outerHTML'));
       $('ul.navbar-nav li a').removeClass('active');
       $(this).addClass('active');
     });
-    $('a.navbar-brand').click(function(this: HTMLAnchorElement) {
+    $('a.navbar-brand').click(function(this: any) {
       console.log($(this).prop('outerHTML'));
       $('ul.navbar-nav li a').removeClass('active');
     });
+    this.x = document.querySelectorAll('ul.navbar-nav li a');
+    // this.x.forEach((element: any) => {
+    //   element.addEventListener('click', function(e: any) {
+    //     console.log(e.target);
+    //   });
+    // });
   }
 }
