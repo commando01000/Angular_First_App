@@ -8,7 +8,7 @@ declare var $: any; // Declare the jQuery variable
 })
 export class NavbarComponent implements OnInit, AfterViewInit {
   constructor() {}
-  x:any;
+  navList:any;
   ngOnInit() {}
   ngAfterViewInit() {
     $('ul.navbar-nav li a').click(function(this: any) {
@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
       console.log($(this).prop('outerHTML'));
       $('ul.navbar-nav li a').removeClass('active');
     });
-    this.x = document.querySelectorAll('ul.navbar-nav li a');
+    this.navList = document.querySelectorAll('ul.navbar-nav li a');
     // this.x.forEach((element: any) => {
     //   element.addEventListener('click', function(e: any) {
     //     console.log(e.target);
