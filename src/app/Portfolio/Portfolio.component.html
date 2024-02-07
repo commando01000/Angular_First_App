@@ -83,20 +83,19 @@
           </div>
         </div>
         <div
-          class="my-card d-flex justify-content-center align-items-center position-absolute"
+          class="my-card d-none justify-content-center align-items-center position-absolute"
         >
-          <!-- <div class="clicked-item">
-            <img src="" class="w-100 rounded-4 overflow-hidden" alt="" />
-          </div> -->
-          <div class="row justify-content-center">
-            <div class="col-md-7">
-              <div class="row">
-                <div class="col-md-12">
-                  <img
-                    src="./assets/images/port3.png"
-                    class="w-100 rounded-4 overflow-hidden"
-                    alt=""
-                  />
+          <div class="clicked-item">
+            <div class="row justify-content-center">
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col-md-12">
+                    <img
+                      [src]="myImage"
+                      class="w-100 rounded-4 overflow-hidden"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>
