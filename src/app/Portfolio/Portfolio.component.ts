@@ -5,14 +5,20 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
   templateUrl: './Portfolio.component.html',
   styleUrls: ['./Portfolio.component.css'],
 })
-export class PortfolioComponent implements OnInit {
-  item: any;
+export class PortfolioComponent implements OnInit, AfterViewInit {
+  items: any;
 
   constructor() {}
 
   ngOnInit() {}
 
-  AfterViewInit() {
-      this.item = document.querySelectorAll('.item');
+  ngAfterViewInit() {
+    this.items = document.querySelectorAll('.item');
+    console.log(this.items);
+    this.items.forEach((item: any) => {
+      item.addEventListener('click', (e: any) => {
+        console.log(e.target);
+      });
+    });
   }
 }

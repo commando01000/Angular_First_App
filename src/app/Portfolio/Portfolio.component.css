@@ -20,3 +20,10 @@
     font-size: 100px;
     color: white;
 }
+
+.my-card {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
