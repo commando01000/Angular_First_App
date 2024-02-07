@@ -10,6 +10,15 @@
   border-radius: 10px;
 } */
 
+.navbar {
+    height: 100px;
+    transition: height 0.3s ease; 
+  }
+
+  .navbar.scrolled {
+    height: 80px;
+  }
+
 .active {
   color: white !important;
   background-color: #1abc9c;

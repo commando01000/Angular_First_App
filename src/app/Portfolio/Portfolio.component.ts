@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-Portfolio',
   templateUrl: './Portfolio.component.html',
-  styleUrls: ['./Portfolio.component.css']
+  styleUrls: ['./Portfolio.component.css'],
 })
 export class PortfolioComponent implements OnInit {
+  item: any;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  AfterViewInit() {
+      this.item = document.querySelectorAll('.item');
   }
-
 }
