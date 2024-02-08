@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-Contact',
   templateUrl: './Contact.component.html',
-  styleUrls: ['./Contact.component.css']
+  styleUrls: ['./Contact.component.css'],
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, AfterViewInit {
+  username:any;
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  ngAfterViewInit() {
+    this.username = document.getElementById('usernameLabel');
+    console.log(this.username);
+    
   }
-
 }
