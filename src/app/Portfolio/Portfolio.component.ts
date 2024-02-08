@@ -9,6 +9,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   items: any;
   myImage: any;
   myCard: any;
+  myCardLayer: any;
   constructor() {}
 
   ngOnInit() {}
@@ -16,28 +17,28 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.items = document.querySelectorAll('.item');
     this.myCard = document.querySelector('.my-card');
-    console.log(this.myCard);
+    this.myCardLayer = document.querySelector('.my-card-layer');
+    // console.log(this.myCard);
 
-    console.log(this.items);
+    // console.log(this.items);
     this.items.forEach((element: any) => {
       element.addEventListener('click', (e: any) => {
-        e.stopPropagation();
-        console.log(element);
-        console.log(element.querySelector('img').getAttribute('src'));
+        // console.log(element);
+        // console.log(element.querySelector('img').getAttribute('src'));
         this.myImage = element.querySelector('img').getAttribute('src');
         this.myCard.classList.remove('d-none');
         this.myCard.classList.add('d-flex');
-        console.log(this.myCard);
+        this.myCardLayer.classList.remove('d-none');
+        // console.log(this.myCard);
+        e.stopPropagation();
       });
     });
     // Add a global event listener to handle clicks anywhere in the document
     document.addEventListener('click', (e: any) => {
-      if (!this.myCard.contains(e.target)) {
-        this.myCard.classList.remove('d-flex');
-        this.myCard.classList.add('d-none');
-        console.log("GGGGG");
-        
-      }
+      this.myCard.classList.remove('d-flex');
+      this.myCard.classList.add('d-none');
+      this.myCardLayer.classList.add('d-none');
+      e.stopPropagation();
     });
   }
 }
