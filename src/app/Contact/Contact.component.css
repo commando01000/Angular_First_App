@@ -1,4 +1,27 @@
 .line {
-    height: 4px;
-    width: 80px;
-  }
+  height: 4px;
+  width: 80px;
+}
+#usernameLabel {
+  transition: all 0.5s ease-in-out;
+  top: 50px;
+}
+
+#ageLabel {
+  transition: all 0.5s ease-in-out;
+  top: 50px;
+}
+
+#emailLabel {
+  transition: all 0.5s ease-in-out;
+  top: 50px;
+}
+
+#passwordLabel {
+  transition: all 0.5s ease-in-out;
+  top: 50px;
+}
+
+label{
+  color:rgb(26, 188, 156);
+}

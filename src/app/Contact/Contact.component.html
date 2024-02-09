@@ -18,11 +18,17 @@
           <div class="col-md-8">
             <div class="row">
               <div class="col-md-12">
-                <div class="mb-3">
-                  <label for="username" id="usernameLabel" class="form-label position-absolute">userName</label>
+                <div class="mb-3 pt-5 position-relative">
+                  <label
+                    for="username"
+                    id="usernameLabel"
+                    class="form-label opacity-0 position-absolute"
+                    >userName</label
+                  >
                   <input
                     type="text"
-                    class="form-control overflow-visible position-relative"
+                    class="form-control"
+                    (keyup)="animateLabel()"
                     name="username"
                     id="username"
                     aria-describedby="helpId"
@@ -31,41 +37,57 @@
                 </div>
               </div>
               <div class="col-md-12">
-                <div class="mb-3">
-                  <label for="userage" class="form-label">userAge</label>
+                <div class="mb-3 pt-5 position-relative">
+                  <label
+                    for="userage"
+                    id="ageLabel"
+                    class="form-label opacity-0 position-absolute"
+                    >userAge</label
+                  >
                   <input
                     type="text"
                     class="form-control"
+                    (keyup)="animateLabel()"
                     name="userage"
-                    id="userage"
+                    id="age"
                     aria-describedby="helpId"
                     placeholder="userAge"
                   />
                 </div>
               </div>
               <div class="col-md-12">
-                <div class="mb-3">
-                  <label for="useremail" class="form-label">userEmail</label>
+                <div class="mb-3 pt-5 position-relative">
+                  <label
+                    for="useremail"
+                    id="emailLabel"
+                    class="form-label opacity-0 position-absolute"
+                    >userEmail</label
+                  >
                   <input
                     type="text"
                     class="form-control"
+                    (keyup)="animateLabel()"
                     name="useremail"
-                    id="useremail"
+                    id="email"
                     aria-describedby="helpId"
                     placeholder="userEmail"
                   />
                 </div>
               </div>
               <div class="col-md-12">
-                <div class="mb-3">
-                  <label for="userpassword" class="form-label"
+                <div class="mb-3 pt-5 position-relative">
+                  <label
+                    for="userpassword"
+                    id="passwordLabel"
+                    class="form-label opacity-0 position-absolute"
                     >userPassword</label
                   >
                   <input
                     type="text"
                     class="form-control"
+                    (keyup)="animateLabel()"
                     name="userpassword"
-                    id="userpassword"
+                    id="password"
                     aria-describedby="helpId"
                     placeholder="userPassword"
                   />
