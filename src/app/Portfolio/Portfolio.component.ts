@@ -33,7 +33,6 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
         e.stopPropagation();
       });
     });
-    // Add a global event listener to handle clicks anywhere in the document
     document.addEventListener('click', (e: any) => {
       this.myCard.classList.remove('d-flex');
       this.myCard.classList.add('d-none');
