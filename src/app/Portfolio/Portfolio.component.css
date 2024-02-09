@@ -38,3 +38,8 @@
   right: 0;
   bottom: 0;
 }
+
+.line {
+  height: 4px;
+  width: 80px;
+}
